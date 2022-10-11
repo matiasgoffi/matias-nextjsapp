@@ -92,5 +92,8 @@ export const GlobalStyles = createGlobalStyle`
   padding: 0.2rem;
   background-color: #33c68baa; 
 }
+a {
+  color: #2bb6dc;
+}
 
 `
