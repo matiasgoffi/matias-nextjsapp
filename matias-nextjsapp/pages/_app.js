@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react"
 import useDarkMode from "use-dark-mode"
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme, GlobalStyles } from "../components/ThemeConfig"
+import { lightTheme, darkTheme, GlobalStyles } from "../components/ThemeConfig";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import Brightness3Icon from '@mui/icons-material/Brightness3';
 
 function MyApp({ Component, pageProps }) {
   const [isMounted, setIsMounted] = useState(false)
@@ -16,9 +18,9 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       {/* <button onClick={darkmode.toggle}>Switch Mode</button> */}
-      <button className="button-theme" onClick={darkmode.enable}>Dark Mode</button>
-      <button className="button-theme"  onClick={darkmode.disable}>Light Mode</button>
-      {isMounted && <Component {...pageProps} />}
+      <button className="button-theme"  onClick={darkmode.disable}><LightModeIcon/></button>
+      <button className="button-theme" onClick={darkmode.enable}><Brightness3Icon /></button>
+      {isMounted && <Component {...pageProps} darkMode={darkmode}/>}
     </ThemeProvider>
   ) 
 }

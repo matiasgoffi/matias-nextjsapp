@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {  Grid  } from "@mui/material";
 import { Box } from "@mui/system";
 import Image from "next/image";
+import useDarkMode from "use-dark-mode";
+import { darkTheme, lightTheme } from "./ThemeConfig";
 
 
-export const Navbar = () => {
+
+
+
+
+
+
+
+export const Navbar = ( ) => {
+
+  const darkmode = useDarkMode(true);
+  const theme = darkmode.value ? darkTheme : lightTheme;
+
   return (
     <div className="navbar">
       <Grid
@@ -29,7 +42,9 @@ export const Navbar = () => {
             top: "40px",
           }}
         >
-          <Box>
+       
+      { theme===darkTheme ? (
+         <Box>
             <Image
               layout="fixed"
               width={80}
@@ -39,6 +54,22 @@ export const Navbar = () => {
               priority
             />
           </Box>
+      )
+          :
+      (
+          <Box>
+            <Image
+              layout="fixed"
+              width={150}
+              height={60}
+              src="/images/logonegro.png"
+              alt="logo"
+              priority
+            />
+          </Box>
+      )  
+    }
+         
         </Grid>
         <Grid
           item
@@ -48,6 +79,7 @@ export const Navbar = () => {
             justifyContent: "center",
           }}
         >
+       
           <Box>
             <nav>
               <ul
