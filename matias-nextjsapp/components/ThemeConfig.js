@@ -164,6 +164,7 @@ a {
   z-index: 100;
   top: 60;
   right: 0;
+  margin-top: 0.4rem;
   background-color:#33c68baa;
   overflow-x: hidden;
   transition: 0.7s;
@@ -196,27 +197,27 @@ a {
 }
 }
 @media only screen and (min-width: 712px) and (max-width: 800px){
-.sidenav {
-    width: 10vw;
-    height: 28%;
+  .sidenav {
+    width: 5vw;
+    height: 24%;
 }
 .sidenav a {
-  padding: 1rem 1rem;
+  padding: 0.4rem 0.4rem;
 }
 }
 @media only screen and (min-width: 800px) and (max-width: 1024px){
   .sidenav {
-      width: 10vw;
-      height: 28%;
+      width: 5vw;
+      height: 24%;
   }
   .sidenav a {
-    padding: 1.5rem 1.5rem;
+    padding: 0.4rem 0.4rem;
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1300px){
   .sidenav {
-      width: 7vw;
-      height: 28%;
+      width: 5vw;
+      height: 20%;
   }
   .sidenav a {
     padding: 1.1rem 1.1rem;
@@ -224,11 +225,11 @@ a {
 }
 @media only screen and (min-width: 1300px){
   .sidenav {
-      width: 7vw;
-      height: 28%;
+      width: 5vw;
+      height: 20%;
   }
   .sidenav a {
-    padding: 1.5rem 1.5rem;
+    padding: 1.1rem 1.1rem;
   }
 }
   
