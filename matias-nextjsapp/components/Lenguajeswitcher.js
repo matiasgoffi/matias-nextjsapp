@@ -18,6 +18,12 @@ export const Lenguajeswitcher = () =>  {
 
   return (
     <select
+      style={{
+        position: 'absolute',
+        top: '10',
+        right: '0',
+        backgroundColor: '#33c68baa',
+      }}
       onChange={switchLanguage}
       defaultValue={locale}
     >

@@ -13,7 +13,7 @@ export const Sidebar = () => {
                 width={20}
                 height={20}
                 alt='linkedin-logo'
-                priority
+                // priority
             />
         </a>
         </Link>
@@ -25,7 +25,7 @@ export const Sidebar = () => {
                 width={50}
                 height={50}
                 alt='linkedin-logo'
-                priority
+                
             />
         </a>
         </Link>

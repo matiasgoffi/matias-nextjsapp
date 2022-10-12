@@ -69,7 +69,7 @@ export const Portfolio = () => {
                     height={10}
                     src={portfolio.image}
                     alt="portfolio-image"
-                    priority
+                   
                   />
                 </div>
                 <hr></hr>
