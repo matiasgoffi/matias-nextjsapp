@@ -1,8 +1,9 @@
-import React from "react";
 import { useRouter } from "next/router"
 import { useCookies } from 'react-cookie';
+import React from 'react'
 
-export const LanguageSwitcher  = () => {
+export const Lenguajeswitcher = () =>  {
+
   const [ cookie, setCookie ] = useCookies(['NEXT_LOCALE']);
   const router = useRouter();
   const { locale } = router;

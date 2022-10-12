@@ -16,7 +16,7 @@ const languages = {
 
 
 function MyApp({ Component, pageProps }) {
-  
+ 
   const router = useRouter()
   const { locale, defaultLocale } = router;
   const messages = languages[locale];
@@ -31,8 +31,9 @@ function MyApp({ Component, pageProps }) {
   }, [])
 
   return (
-    <IntlProvider messages={messages} locale='en' defaultLocale={defaultLocale}>
+
     <ThemeProvider theme={theme}>
+     <IntlProvider messages={messages} locale='en' defaultLocale={defaultLocale}>
       <GlobalStyles />
       {/* <button onClick={darkmode.toggle}>Switch Mode</button> */}
       <button className="button-theme"  onClick={darkmode.disable}><LightModeIcon/></button>
@@ -40,8 +41,9 @@ function MyApp({ Component, pageProps }) {
       <Layout >
       {isMounted && <Component {...pageProps} darkMode={darkmode}/>}
       </Layout>
+      </IntlProvider>
     </ThemeProvider>
-    </IntlProvider>
+ 
   ) 
 }
 

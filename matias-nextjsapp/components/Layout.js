@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "../components/Navbar";
-import Lenguageswitcher, { LanguageSwitcher } from "./Languageswitcher";
+import { Lenguajeswitcher } from "./Lenguajeswitcher";
 import { Sidebar } from "./Sidebar";
 
 
@@ -11,7 +11,7 @@ export const Layout = (props) => {
 
   return (
     <>
-      <LanguageSwitcher />
+      <Lenguajeswitcher />
       <Navbar />
       <Sidebar />
       {props.children}

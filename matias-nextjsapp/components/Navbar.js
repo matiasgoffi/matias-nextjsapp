@@ -3,13 +3,18 @@ import {  Grid  } from "@mui/material";
 import { Box } from "@mui/system";
 import Image from "next/image";
 import useDarkMode from "use-dark-mode";
-import { darkTheme, lightTheme } from "./ThemeConfig"
+import { darkTheme, lightTheme } from "./ThemeConfig";
+
 
 
 export const Navbar = ( ) => {
-
+  const [isMounted, setIsMounted] = useState(false)
   const darkmode = useDarkMode(true);
   const theme = darkmode.value ? darkTheme : lightTheme;
+  
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   return (
     <div className="navbar">
@@ -38,7 +43,7 @@ export const Navbar = ( ) => {
           }}
         >
        
-      { theme===darkTheme ? (
+      { isMounted && theme===darkTheme ? (
          <Box>
             <Image
               layout="fixed"
@@ -58,9 +63,9 @@ export const Navbar = ( ) => {
               width={150}
               height={60}
               src="/images/logonegro.png"
-              alt="logo"
+              alt="logonegro"
               priority
-            />
+             />
           </Box>
       )  
     }
