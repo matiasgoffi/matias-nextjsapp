@@ -78,7 +78,10 @@ export const Portfolio = () => {
                 </p>
                 <Link href={portfolio.link} passHref>
                   <a
-                    style={{ textAlign: "center", padding: "1rem 1rem" }}
+                    style={{ textAlign: "left",
+                              position: 'absolute',
+                              bottom: '0',
+                           }}
                     target="_blank"
                   >
                     {portfolio.link}
