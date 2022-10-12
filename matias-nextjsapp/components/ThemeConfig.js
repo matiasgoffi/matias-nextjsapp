@@ -192,7 +192,7 @@ a {
     height: 20%;
 }
 .sidenav a {
-  padding: 0.8rem 0.8rem;
+  padding: 0.5rem 0.5rem;
 }
 }
 @media only screen and (min-width: 712px) and (max-width: 800px){
