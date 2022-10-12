@@ -157,6 +157,81 @@ a {
 	        animation: slide-top 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+.sidenav {
+  height: 20%;
+  width: 17vw;
+  position: fixed;
+  z-index: 100;
+  top: 60;
+  right: 0;
+  background-color:#33c68baa;
+  overflow-x: hidden;
+  transition: 0.7s;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.sidenav a {
+  padding: 0.8rem 0.8rem;
+  text-decoration: none;
+  font-size: 25px;
+  color: #363537;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+@media only screen and (min-width: 400px) and (max-width: 712px){
+  .sidenav {
+    width: 10vw;
+    height: 20%;
+}
+.sidenav a {
+  padding: 0.8rem 0.8rem;
+}
+}
+@media only screen and (min-width: 712px) and (max-width: 800px){
+.sidenav {
+    width: 10vw;
+    height: 28%;
+}
+.sidenav a {
+  padding: 1rem 1rem;
+}
+}
+@media only screen and (min-width: 800px) and (max-width: 1024px){
+  .sidenav {
+      width: 10vw;
+      height: 28%;
+  }
+  .sidenav a {
+    padding: 1.5rem 1.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1300px){
+  .sidenav {
+      width: 7vw;
+      height: 28%;
+  }
+  .sidenav a {
+    padding: 1.1rem 1.1rem;
+  }
+}
+@media only screen and (min-width: 1300px){
+  .sidenav {
+      width: 7vw;
+      height: 28%;
+  }
+  .sidenav a {
+    padding: 1.5rem 1.5rem;
+  }
+}
+  
 
 
 `

@@ -17,7 +17,7 @@ export const Navbar = ( ) => {
         container
         sx={{
           zIndex: '99', 
-          boxShadow: " 2px 5px 5px #33c68baa;",
+          boxShadow: "0px 5px #33c68baa;",
           borderRadius: "5px",
           display: "flex",
           flexDirection: "row",

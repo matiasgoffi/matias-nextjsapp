@@ -24,4 +24,7 @@
 	        animation: color-change-2x 5s ease-in-out infinite alternate both;
 }
 */
-
+li {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px ;
+}
