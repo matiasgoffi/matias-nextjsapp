@@ -16,6 +16,7 @@ export const Navbar = ( ) => {
       <Grid
         container
         sx={{
+          zIndex: '99', 
           boxShadow: " 2px 5px 5px #33c68baa;",
           borderRadius: "5px",
           display: "flex",
@@ -28,7 +29,8 @@ export const Navbar = ( ) => {
           item
           className="image-nav"
           xs={12}
-          sm={6}
+          sm={4}
+          md={4}
           sx={{
             textAlign: "center",
             position: "relative",
@@ -67,14 +69,15 @@ export const Navbar = ( ) => {
         <Grid
           item
           xs={12}
-          sm={6}
+          sm={8}
+          md={8}
           sx={{
             justifyContent: "center",
           }}
         >
        
           <Box>
-            <nav>
+            <nav style={{paddingBottom:'2rem'}}>
               <ul
                 style={{
                   padding: "0px 0px !important",

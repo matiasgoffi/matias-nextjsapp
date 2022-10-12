@@ -15,7 +15,9 @@ export const darkTheme = {
 }
 
 export const GlobalStyles = createGlobalStyle`
-  body {
+
+  
+body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
@@ -95,5 +97,66 @@ export const GlobalStyles = createGlobalStyle`
 a {
   color: #2bb6dc;
 }
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.portfolio-title{
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(50);
+            transform: translateY(50);
+  }
+  100% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+}
+
+
+.portfolio-card  {
+	-webkit-animation: slide-top 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
 
 `
