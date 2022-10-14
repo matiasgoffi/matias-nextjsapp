@@ -10,10 +10,11 @@ export const Portfolio = () => {
   return (
     <div
       style={{
-        marginTop: "5rem",
+        marginTop: "2rem",
         marginBottom: "5rem",
       }}
     >
+      <hr></hr>
       <Grid
         container
         sx={{

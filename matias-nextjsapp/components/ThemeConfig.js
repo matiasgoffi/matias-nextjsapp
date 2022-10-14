@@ -124,8 +124,7 @@ a {
 }
 
 .portfolio-title{
-  padding-left: 2rem;
-  padding-bottom: 2rem;
+  padding: 0rem 0rem 1rem 1rem;
   -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
             animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
