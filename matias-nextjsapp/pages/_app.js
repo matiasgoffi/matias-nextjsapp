@@ -5,13 +5,17 @@ import { lightTheme, darkTheme, GlobalStyles } from "../components/ThemeConfig";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import { Layout } from "../components/Layout";
-import { IntlProvider } from 'react-intl';
-import { useRouter } from "next/router"
+import {  IntlProvider } from 'react-intl';
+import { useRouter } from "next/router";
+import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+import DateFnsUtils from "@date-io/date-fns";
+
+
 
 
 const languages = {
-  en: require('../locale/en.json'),
-  es: require('../locale/es.json')
+  en: require('/public/locale/en.json'),
+  es: require('/public/locale/es.json')
 };
 
 
@@ -33,14 +37,16 @@ function MyApp({ Component, pageProps }) {
   return (
 
     <ThemeProvider theme={theme}>
-     <IntlProvider messages={messages} locale='en' defaultLocale={defaultLocale}>
+     <IntlProvider messages={messages} locale={locale} defaultLocale={defaultLocale}>
       <GlobalStyles />
+      <MuiPickersUtilsProvider utils={DateFnsUtils} >
       {/* <button onClick={darkmode.toggle}>Switch Mode</button> */}
       <button className="button-theme"  onClick={darkmode.disable}><LightModeIcon/></button>
       <button className="button-theme" onClick={darkmode.enable}><Brightness3Icon /></button>
       <Layout >
       {isMounted && <Component {...pageProps} darkMode={darkmode}/>}
       </Layout>
+      </MuiPickersUtilsProvider>
       </IntlProvider>
     </ThemeProvider>
  

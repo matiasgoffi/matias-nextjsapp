@@ -187,6 +187,8 @@ a {
 .sidenav a:hover {
   color: #f1f1f1;
 }
+
+
 @media only screen and (min-width: 400px) and (max-width: 712px){
   .sidenav {
     width: 10vw;
@@ -232,7 +234,10 @@ a {
     padding: 1.1rem 1.1rem;
   }
 }
-  
+
+.MuiInputBase-input{
+  text-align: center;
+}
 
 
 `

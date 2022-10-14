@@ -5,6 +5,7 @@ import Link from "next/link";
 import React from "react";
 import { portfolio } from "../public/js/portfolio";
 
+
 export const Portfolio = () => {
   return (
     <div
@@ -23,7 +24,7 @@ export const Portfolio = () => {
         }}
       >
         <Grid item xs={12}>
-          <h2 className="portfolio-title">Nuestro Portfolio</h2>
+          <h2 className="portfolio-title"> Nuestro Portfolio</h2>
           <hr></hr>
           <br></br>
           <br></br>
